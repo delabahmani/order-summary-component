@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --paleblue: hsl(225, 100%, 94%);
+    --brightblue: hsl(245, 75%, 52%);
+    --verypaleblue: hsl(225, 100%, 98%);
+    --desaturatedblue: hsl(224, 23%, 55%);
+    --darkblue: hsl(223, 47%, 23%);
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 47%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--paleblue);
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1em;
+    position: relative;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: var(--white);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.content {
+    text-align: center;
+    padding: 7%;
+}
+
+.title {
+    font-size: 2em;
+    font-weight: 900;
+    color: var(--darkblue);
+    margin-bottom: 20px;
+}
+
+.paragraph {
+    color: var(--grey);
+    margin-bottom: 25px;
+}
+
+.subscription {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.subscription-left {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.subscription-left div {
+    margin-left: 1.4em;
+}
+
+.subscription-left div h5 {
+    font-weight: 900;
+    font-size: 1em;
+    color: var(--darkblue);
+    margin-bottom: 3px;
+}
+
+.subscription-left div p {
+    font-size: 1em;
+    color: var(--grey)
+}
+
+.subscription a {
+    font-weight: 900;
+    color: var(--brightblue);
+}
+
+.subscription a:hover {
+    text-decoration: none;
+    opacity: .6;
+    transition: .3s ease;
+}
+
+a.payment-btn {
+    font-size: 15px;
+    display: block;
+    text-decoration: none;
+    font-weight: 700;
+    background-color: var(--brightblue);
+    color: var(--white);
+    padding: 1em 0;
+    border-radius: 12px;
+    margin: 30px 0;
+    box-shadow: 0 10px 30px 0 hsla(245, 75%, 52%, .24);
+}
+
+a.payment-btn:hover {
+    opacity: .6;
+    transition: .3s ease;
+}
+
+a.cancel-btn {
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--desaturatedblue);
+}
+
+a.cancel-btn:hover {
+    color: var(--darkblue);
+    transition: color .3s ease;
+}
+
+@media only screen and (max-width: 425px) {
+    .container {
+        min-width: 85%;
+    }
+
+    body {
+        background-image: url(./images/pattern-background-mobile.svg);
+        font-size: 14px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .subscription a {
+        margin-right: 5px;
+    }
+
+    h5 {
+        width: 100px;
+    }
+
+    .content {
+        padding: 9% 7%;
+    }
+
+    .subscription {
+        padding: 12px;
+    }
+
+    .subscription-left div {
+        margin-left: 21px;
+    }
+
+    .subscription a {
+        font-size: 13px;
+    }
+
+    a.payment-btn, a.cancel-btn {
+        font-size: 1em;
+    }
+}
+
